@@ -23,7 +23,7 @@ export const addNewProduct = async (formData) => {
 
 export const getAllAdminProducts = async () => {
     try {
-        const res = await fetch(`${NEXT_PUBLIC_BASE_URL}/api/admin/all-products`, {
+        const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/admin/all-products`, {
             method: "GET",
             cache: "no-store",
         });
