@@ -76,7 +76,7 @@ export const deleteAProduct = async (id) => {
 export const productByCategory = async (id) => {
     try {
         const res = await fetch(
-            `${BASE_URL}/api/admin/product-by-category?id=${id}`,
+            `${process.env.BASE_URL}/api/admin/product-by-category?id=${id}`,
             {
                 method: "GET",
                 cache: "no-store",
@@ -94,7 +94,7 @@ export const productByCategory = async (id) => {
 export const productById = async (id) => {
     try {
         const res = await fetch(
-            `${BASE_URL}/api/admin/product-by-id?id=${id}`,
+            `${process.env.BASE_URL}/api/admin/product-by-id?id=${id}`,
             {
                 method: "GET",
                 cache: "no-store",
