@@ -13,7 +13,7 @@ yarn dev
 pnpm dev
 ```
 
-Open [BASE_URL](BASE_URL) with your browser to see the result.
+Open [NEXT_PUBLIC_BASE_URL](NEXT_PUBLIC_BASE_URL) with your browser to see the result.
 
 You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
 
