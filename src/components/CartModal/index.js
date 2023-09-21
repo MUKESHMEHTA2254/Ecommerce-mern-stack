@@ -32,23 +32,20 @@ export default function CartModal() {
                         ...item,
                         productID: {
                             ...item.productID,
-                            price:
-                                item.productID.onSale === "yes"
-                                    ? parseInt(
-                                        (
-                                            item.productID.price -
-                                            item.productID.price * (item.productID.priceDrop / 100)
-                                        ).toFixed(2)
-                                    )
-                                    : item.productID.price,
+                            price: item.productID &&item.productID.onSale === "yes" ?
+                                    parseInt((
+                                        item.productID.price - item.productID.price * (item.productID.priceDrop / 100)
+                                    ).toFixed(2), 10) 
+
+                                : item.productID&& item.productID.price,
                         },
-                    }))
+                    }
+                    ))
                     : [];
             setCartItems(updatedData);
             localStorage.setItem("cartItems", JSON.stringify(updatedData));
         }
 
-        console.log(res);
     }
 
     useEffect(() => {
